@@ -1,0 +1,83 @@
+site_name: intrand
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: deep purple
+      accent: teal
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+
+    - scheme: default
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+  font:
+    text: Roboto
+  # font: false
+  language: en
+  logo: assets/tl.png
+  # icon:
+  #   logo: material/library
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - toc.integrate
+    - search.suggest
+extra:
+  homepage: https://intrand.github.io
+  analytics: false
+  version:
+    provider: mike
+  social:
+    - name: intrand on GitHub
+      icon: fontawesome/brands/github
+      link: https://github.com/intrand
+
+    # - name: int_rand on Twitter
+    #   icon: fontawesome/brands/twitter
+    #   link: https://twitter.com/int_rand
+
+    - name: intrand on YouTube
+      icon: fontawesome/brands/youtube
+      link: https://youtube.com/channel/UCpu1O4TvLzTS5Ya9aao124A
+
+    # - name: intrand on hub.docker.com
+    #   icon: fontawesome/brands/docker
+    #   link: https://hub.docker.com/u/intrand
+
+  # generator: false
+plugins:
+  - search
+  - git-revision-date
+copyright: Copyright &copy; 2021 intrand
+repo_url: https://github.com/intrand/intrand.github.io
+repo_name: intrand/intrand.github.io
+edit_uri: edit/main/docs/
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:pymdownx.emoji.gemoji
+  # - pymdownx.emoji:
+  #     emoji_index: !!python/name:materialx.emoji.twemoji
+  #     emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      use_pygments: true
+      linenums: true
+  - pymdownx.superfences
+  - abbr
+  - pymdownx.snippets
+  - attr_list
+  - def_list
+  - footnotes
+  - toc:
+      permalink: true
+  - tables
+  - pymdownx.smartsymbols
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
