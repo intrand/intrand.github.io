@@ -9,19 +9,19 @@
       
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
     
     
       
-        <title>intrand</title>
+        <title>logger - intrand</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.db9e7362.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.db9e7362.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.3f5d1f46.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
         
       
     
@@ -55,7 +55,7 @@
     <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="teal">
   
     
-    <script>function __prefix(e){return new URL("/",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
       <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
@@ -63,6 +63,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#logger" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -75,7 +80,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="https://intrand.github.io" title="intrand" class="md-header__button md-logo" aria-label="intrand" data-md-component="logo">
       
-  <img src="/assets/tl.png" alt="logo">
+  <img src="../../assets/tl.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -91,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              logger
             
           </span>
         </div>
@@ -200,7 +205,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="https://intrand.github.io" title="intrand" class="md-nav__button md-logo" aria-label="intrand" data-md-component="logo">
       
-  <img src="/assets/tl.png" alt="logo">
+  <img src="../../assets/tl.png" alt="logo">
 
     </a>
     intrand
@@ -229,7 +234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -244,7 +249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/CV/" class="md-nav__link">
+      <a href="../../CV/" class="md-nav__link">
         CV
       </a>
     </li>
@@ -257,12 +262,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -285,7 +292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Projects/about/" class="md-nav__link">
+      <a href="../about/" class="md-nav__link">
         about
       </a>
     </li>
@@ -299,7 +306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Projects/discord-bot/" class="md-nav__link">
+      <a href="../discord-bot/" class="md-nav__link">
         discord-bot
       </a>
     </li>
@@ -313,7 +320,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Projects/idle/" class="md-nav__link">
+      <a href="../idle/" class="md-nav__link">
         idle
       </a>
     </li>
@@ -327,7 +334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Projects/initVm/" class="md-nav__link">
+      <a href="../initVm/" class="md-nav__link">
         initVm
       </a>
     </li>
@@ -339,11 +346,58 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/Projects/logger/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          logger
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         logger
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#design" class="md-nav__link">
+    Design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    Status
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -355,7 +409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Projects/openvpn/" class="md-nav__link">
+      <a href="../openvpn/" class="md-nav__link">
         openvpn
       </a>
     </li>
@@ -369,7 +423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Projects/relay-webhook/" class="md-nav__link">
+      <a href="../relay-webhook/" class="md-nav__link">
         relay-webhook
       </a>
     </li>
@@ -383,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Projects/storytime/" class="md-nav__link">
+      <a href="../storytime/" class="md-nav__link">
         storytime
       </a>
     </li>
@@ -397,7 +451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Projects/x11/" class="md-nav__link">
+      <a href="../x11/" class="md-nav__link">
         x11
       </a>
     </li>
@@ -422,7 +476,37 @@
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+                  <a href="https://github.com/intrand/intrand.github.io/edit/main/docs/Projects/logger.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="logger">logger<a class="headerlink" href="#logger" title="Permanent link">&para;</a></h1>
+<p><code>logger</code> is a simple RESTful API that will reflect and log whatever is sent to it, even garbage. It is intentionally not safe for production use.</p>
+<h2 id="design">Design<a class="headerlink" href="#design" title="Permanent link">&para;</a></h2>
+<p>I needed a service that could accept any payload at any route and display it in some way. Sometimes appliances or even internal tools don't provide samples of JSON request/response bodies and it's quicker to configure the tool to point to something that can dump it to <code>stdout</code> than it is to debug custom client code.</p>
+<p><code>logger</code> is just a simple, single-file python <code>flask</code> service that runs inside of a <code>docker</code> container.</p>
+<h2 id="status">Status<a class="headerlink" href="#status" title="Permanent link">&para;</a></h2>
+<p>It's useful from time to time and doesn't require much maintenance, especially thanks to <code>docker</code> creating a reproducible environment.</p>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: 2021-10-24
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
 
               
             </article>
@@ -433,6 +517,41 @@
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../initVm/" class="md-footer__link md-footer__link--prev" aria-label="Previous: initVm" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              initVm
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../openvpn/" class="md-footer__link md-footer__link--next" aria-label="Next: openvpn" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              openvpn
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -475,10 +594,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "/", "features": ["navigation.instant", "navigation.tracking", "toc.integrate", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "/assets/javascripts/workers/search.8397ff9e.min.js", "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "toc.integrate", "search.suggest"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": {"provider": "mike"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.1e84347e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.1e84347e.min.js"></script>
       
     
   </body>
