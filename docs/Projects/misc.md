@@ -18,7 +18,13 @@ My first attempt at making an exporter to describe the state of an entire cluste
 
 Status: I no longer maintain this.
 
-## `samba-simple`
+## rtmpd
+
+`rtmpd` was a Twitch-like site that let me and some friends test our stream settings and goof around with silly ideas.
+
+Status: I no longer maintain this.
+
+## samba-simple
 
 `samba-simple` was a simple-to-configure `samba` server that ran inside of a container.
 
