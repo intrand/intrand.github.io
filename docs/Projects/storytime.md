@@ -1,4 +1,4 @@
-# Storytime
+# storytime
 
 `storytime` was an attempt at recreating an experience as a child using discord instead of a room full of kids/people.
 
