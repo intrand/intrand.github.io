@@ -14,7 +14,7 @@
     
     
       
-        <title>x11 - intrand</title>
+        <title>duplicity-backup - intrand</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#x11" class="md-skip">
+        <a href="#duplicity-backup" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              x11
+              duplicity-backup
             
           </span>
         </div>
@@ -332,11 +332,58 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../duplicity-backup/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          duplicity-backup
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         duplicity-backup
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#design" class="md-nav__link">
+    Design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    Status
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -528,65 +575,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          x11
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../x11/" class="md-nav__link">
         x11
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#design" class="md-nav__link">
-    Design
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fatal-flaw" class="md-nav__link">
-    Fatal flaw
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    Conclusion
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -610,20 +603,18 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/intrand/intrand.github.io/edit/main/docs/Projects/x11.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/intrand/intrand.github.io/edit/main/docs/Projects/duplicity-backup.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="x11">x11<a class="headerlink" href="#x11" title="Permanent link">&para;</a></h1>
-<p>Run an X11 display inside of a container. I had a small server plugged into a stereo, which was then plugged into a TV and built <code>x11</code> to see if we could use the small server for watching movies.</p>
+                <h1 id="duplicity-backup">duplicity-backup<a class="headerlink" href="#duplicity-backup" title="Permanent link">&para;</a></h1>
+<p><code>duplicity-backup</code> is a relatively simple wrapper around <code>duplicity</code> that makes it simple to have regular, automated backup jobs run for you.</p>
 <h2 id="design">Design<a class="headerlink" href="#design" title="Permanent link">&para;</a></h2>
-<p>I attempted to pack as much of the display-related software and configuration as possible into a container image. This kept the server host operating system squeaky clean while the "display junk" was inside of a container.</p>
-<p>Ultimately, this is just a Dockerfile.</p>
-<h2 id="fatal-flaw">Fatal flaw<a class="headerlink" href="#fatal-flaw" title="Permanent link">&para;</a></h2>
-<p>Drivers, libraries, container privileges, etc. made this a pain to maintain.</p>
-<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
-<p>Never again. Buy a 'stick' or set-top box product instead.</p>
+<p>Instead of setting up a cronjob to fire a script with a bunch of secrets and configuration data, I chose to use a Kubernetes CronJob to run a container that mounted a ConfigMap into it. This meant I could describe all of my backup procudure in YAML and it would work regardless of the host operating system.</p>
+<p><code>duplicity-backup</code> makes the assumption that <code>rsync</code> is used over <code>ssh</code> in order to keep things simple.</p>
+<h2 id="status">Status<a class="headerlink" href="#status" title="Permanent link">&para;</a></h2>
+<p>Useful! I keep regular off-site backups in case of fire, flood, theft, natural disaster, etc. The need is becoming and less and less over time thanks to cloud services, switching hobbies, reducing and simplifying our digital footprint, etc. Still, for the few things we do use it for, it's awesome.</p>
                 
                   
                     
@@ -656,7 +647,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../wg-meshify/" class="md-footer__link md-footer__link--prev" aria-label="Previous: wg-meshify" rel="prev">
+        <a href="../discord-bot/" class="md-footer__link md-footer__link--prev" aria-label="Previous: discord-bot" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -665,11 +656,26 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              wg-meshify
+              discord-bot
             </div>
           </div>
         </a>
       
+      
+        
+        <a href="../game_servers/" class="md-footer__link md-footer__link--next" aria-label="Next: game servers" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              game servers
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   

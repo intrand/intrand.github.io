@@ -334,6 +334,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../duplicity-backup/" class="md-nav__link">
+        duplicity-backup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../game_servers/" class="md-nav__link">
         game servers
       </a>
@@ -451,6 +465,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../misc/" class="md-nav__link">
+        misc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../openvpn/" class="md-nav__link">
         openvpn
       </a>
@@ -479,6 +507,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../random/" class="md-nav__link">
+        random
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../relay-webhook/" class="md-nav__link">
         relay-webhook
       </a>
@@ -493,8 +535,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../rsync/" class="md-nav__link">
+        rsync-server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../storytime/" class="md-nav__link">
         storytime
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wg-meshify/" class="md-nav__link">
+        wg-meshify
       </a>
     </li>
   
@@ -541,11 +611,18 @@
                 <h1 id="idle">idle<a class="headerlink" href="#idle" title="Permanent link">&para;</a></h1>
 <p><code>idle</code> is my first online, <a href="https://en.wikipedia.org/wiki/Zero-player_game" target="_blank">zero-player</a> game. Previously, I hosted this myself and you could play it at <a href="https://idle.intrand.io" target="_blank">idle.intrand.io</a>, but that's no longer true.</p>
 <h2 id="design">Design<a class="headerlink" href="#design" title="Permanent link">&para;</a></h2>
-<p>Mongo Database &lt;---&gt; API server &lt;---&gt; client, engine, discord-bot &lt;---&gt; "players"</p>
-<p>This was akin to twitch.tv "channel points" in that the player passively accumulated "progress" (levels, stats, items, etc) by simply being logged in to a discord server alongside the bot.</p>
+<p><code>idle</code> is comprised of the following components:</p>
+<ul>
+<li><code>db</code>: A Mongo database containing the world states, players, characters, items, NPCs, maps, etc.</li>
+<li><code>api</code>: The gatekeeper between the database and the rest of the stack</li>
+<li><code>web</code>: A graphical representation of the API data</li>
+<li><code>engine</code>: Analyzes world state from the API and updates it accordingly; makes "progress" happen</li>
+<li><code>discord</code>: Bot that sits in discord servers watching for people to be online so they receive "credit" for playing</li>
+</ul>
+<p>This is akin to twitch.tv "channel points" in that the player passively accumulates "progress" (levels, stats, items, etc) by simply being logged in to a discord server alongside the bot.</p>
 <h2 id="status">Status<a class="headerlink" href="#status" title="Permanent link">&para;</a></h2>
 <p>Back burner project.</p>
-<p>Once in a blue moon I'll update it and make some progress, but this is now closed-source due to relative inactivity.</p>
+<p>Once in a blue moon I'll update it and make some progress, but this is now closed-source due to relative inactivity. I've also stopped hosting things myself, so it's difficult to care about making updates right now.</p>
                 
                   
                     
