@@ -14,7 +14,7 @@
     
     
       
-        <title>jot - intrand</title>
+        <title>ansible - intrand</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#jot" class="md-skip">
+        <a href="#ansible" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              jot
+              ansible
             
           </span>
         </div>
@@ -318,11 +318,58 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../ansible/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ansible
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         ansible
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#design" class="md-nav__link">
+    Design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    Status
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -402,58 +449,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          jot
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../jot/" class="md-nav__link">
         jot
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#design" class="md-nav__link">
-    Design
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#status" class="md-nav__link">
-    Status
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -631,22 +631,17 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/intrand/intrand.github.io/edit/main/docs/Projects/jot.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/intrand/intrand.github.io/edit/main/docs/Projects/ansible.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="jot">jot<a class="headerlink" href="#jot" title="Permanent link">&para;</a></h1>
-<p><code>jot</code> allowed you to very quickly store a note.</p>
+                <h1 id="ansible">ansible<a class="headerlink" href="#ansible" title="Permanent link">&para;</a></h1>
+<p><code>ansible</code> is upstream <code>ansible</code> inside of a container.</p>
 <h2 id="design">Design<a class="headerlink" href="#design" title="Permanent link">&para;</a></h2>
-<p><code>jot</code> consistented of three components:</p>
-<ul>
-<li><code>db</code>: A Mongo database containing all users and notes</li>
-<li><code>api</code>: The gatekeeper between the front-end and database</li>
-<li><code>web</code>: A front-end for the user to view, update or delete notes</li>
-</ul>
+<p><code>ansible</code> is just a Dockerfile with some dependencies for commonly-used <code>ansible</code> modules installed alongside <code>ansible</code> itself. Typically one would run <code>ansible-playbook</code> but all of the core tools are available in the same container image.</p>
 <h2 id="status">Status<a class="headerlink" href="#status" title="Permanent link">&para;</a></h2>
-<p>Abandoned. There are other, "good enough" note-taking utilities readily available for use on any major platform. I don't have time to maintain my own.</p>
+<p>Useful, but I stopped hosting my own stuff, so there's presently little to no need for <code>ansible</code>.</p>
                 
                   
                     
@@ -679,7 +674,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../initVm/" class="md-footer__link md-footer__link--prev" aria-label="Previous: initVm" rel="prev">
+        <a href="../alertmanager-statuspage/" class="md-footer__link md-footer__link--prev" aria-label="Previous: alertmanager-statuspage" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -688,20 +683,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              initVm
+              alertmanager-statuspage
             </div>
           </div>
         </a>
       
       
         
-        <a href="../logger/" class="md-footer__link md-footer__link--next" aria-label="Next: logger" rel="next">
+        <a href="../discord-bot/" class="md-footer__link md-footer__link--next" aria-label="Next: discord-bot" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              logger
+              discord-bot
             </div>
           </div>
           <div class="md-footer__button md-icon">
